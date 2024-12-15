@@ -1,28 +1,24 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import App from "./App";
+import { LoggedInToastProps } from "./components/LoggedInToast/LoggedInToast";
 
-// Mock child components
 jest.mock("./components/SignInToast/SignInToast", () => ({
   SignInToast: ({
-    setLoggedIn,
+    setLoggedInUser,
   }: {
-    setLoggedIn: (loggedIn: boolean) => void;
+    setLoggedInUser: (loggedInUser: string) => void;
   }) => (
     <div data-testid="sign-in-toast">
-      <button onClick={() => setLoggedIn(true)}>Login now</button>
+      <button onClick={() => setLoggedInUser("test")}>Login now</button>
     </div>
   ),
 }));
 
 jest.mock("./components/LoggedInToast/LoggedInToast", () => ({
-  LoggedInToast: ({
-    setLoggedIn,
-  }: {
-    setLoggedIn: (loggedIn: boolean) => void;
-  }) => (
+  LoggedInToast: ({ setLoggedInUser }: LoggedInToastProps) => (
     <div data-testid="logged-in-toast">
       LoggedInToast
-      <button onClick={() => setLoggedIn(false)}>Log Out</button>
+      <button onClick={() => setLoggedInUser("")}>Log Out</button>
     </div>
   ),
 }));

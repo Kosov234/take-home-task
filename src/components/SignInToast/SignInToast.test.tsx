@@ -11,7 +11,7 @@ describe("SignInToast", () => {
   const mockSetLoggedIn = jest.fn();
 
   const renderComponent = () => {
-    render(<SignInToast setLoggedIn={mockSetLoggedIn} />);
+    render(<SignInToast setLoggedInUser={mockSetLoggedIn} />);
   };
 
   it("renders correctly", () => {
@@ -165,7 +165,7 @@ describe("SignInToast", () => {
 
     describe("when the form is submitted", () => {
       describe("with correct values", () => {
-        it("submits the form with valid credentials and sets the Logged In state as 'true' ", async () => {
+        it("submits the form with valid credentials and sets the correct Logged In User ", async () => {
           renderComponent();
 
           const emailInput = screen.getByPlaceholderText("Username");
@@ -188,7 +188,7 @@ describe("SignInToast", () => {
                 password: "hello123",
               }),
             });
-            expect(mockSetLoggedIn).toHaveBeenCalledWith(true);
+            expect(mockSetLoggedIn).toHaveBeenCalledWith("hello@edited.com");
           });
         });
 

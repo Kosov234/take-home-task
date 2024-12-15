@@ -6,10 +6,10 @@ import { emailRegex, passwordRegex } from "./constants";
 import "./SignInToast.css";
 
 type SignInToastProps = {
-  setLoggedIn: (loggedIn: boolean) => void;
+  setLoggedInUser: (loggedIn: string) => void;
 };
 
-export const SignInToast = ({ setLoggedIn }: SignInToastProps) => {
+export const SignInToast = ({ setLoggedInUser }: SignInToastProps) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isRememberMeChecked, setIsRememberMeChecked] = useState(false);
@@ -45,7 +45,7 @@ export const SignInToast = ({ setLoggedIn }: SignInToastProps) => {
         if (isRememberMeChecked) {
           localStorage.setItem("email", email);
         }
-        setLoggedIn(response.ok);
+        setLoggedInUser(email);
         setLoading(false);
       } else {
         window.alert("Invalid email or password");

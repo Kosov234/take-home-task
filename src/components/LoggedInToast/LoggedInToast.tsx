@@ -1,14 +1,18 @@
 import "./LoggedInToast.css";
 
-type LoggedInToastProps = {
-  setLoggedIn: (loggedIn: boolean) => void;
+export type LoggedInToastProps = {
+  setLoggedInUser: (loggedIn: string) => void;
+  loggedInUser: string;
 };
 
-export const LoggedInToast = ({ setLoggedIn }: LoggedInToastProps) => {
+export const LoggedInToast = ({
+  setLoggedInUser,
+  loggedInUser,
+}: LoggedInToastProps) => {
   return (
     <div className="LoggedInToast-Wrapper">
-      <h1>{`Hi, ${localStorage.getItem("email")}`}</h1>
-      <a className="LoggedInToast-Link" onClick={() => setLoggedIn(false)}>
+      <h1>{`Hi, ${loggedInUser}`}</h1>
+      <a className="LoggedInToast-Link" onClick={() => setLoggedInUser("")}>
         Logout
       </a>
     </div>

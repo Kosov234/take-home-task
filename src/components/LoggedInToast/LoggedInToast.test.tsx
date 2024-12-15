@@ -5,7 +5,12 @@ describe("LoggedInToast", () => {
   const mockSetLoggedIn = jest.fn();
 
   const renderComponent = () => {
-    render(<LoggedInToast setLoggedIn={mockSetLoggedIn} />);
+    render(
+      <LoggedInToast
+        setLoggedInUser={mockSetLoggedIn}
+        loggedInUser="saved@example.com"
+      />
+    );
   };
 
   beforeEach(() => {
@@ -13,8 +18,6 @@ describe("LoggedInToast", () => {
   });
 
   it("renders the logged in message", () => {
-    localStorage.setItem("email", "saved@example.com");
-
     renderComponent();
 
     expect(screen.getByText("Hi, saved@example.com")).toBeInTheDocument();
@@ -33,6 +36,6 @@ describe("LoggedInToast", () => {
     const logoutLink = screen.getByText("Logout");
     fireEvent.click(logoutLink);
 
-    expect(mockSetLoggedIn).toHaveBeenCalledWith(false);
+    expect(mockSetLoggedIn).toHaveBeenCalledWith("");
   });
 });

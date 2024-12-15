@@ -4,14 +4,17 @@ import { LoggedInToast } from "./components/LoggedInToast/LoggedInToast";
 import "./App.css";
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedInUser, setLoggedInUser] = useState("");
 
   return (
     <div className="AppWrapper">
-      {loggedIn ? (
-        <LoggedInToast setLoggedIn={setLoggedIn} />
+      {loggedInUser ? (
+        <LoggedInToast
+          setLoggedInUser={setLoggedInUser}
+          loggedInUser={loggedInUser}
+        />
       ) : (
-        <SignInToast setLoggedIn={setLoggedIn} />
+        <SignInToast setLoggedInUser={setLoggedInUser} />
       )}
     </div>
   );
