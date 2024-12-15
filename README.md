@@ -24,8 +24,6 @@ yarn dev
 
 ## How to run tests
 
-Clone the repo
-
 Run
 
 ```
