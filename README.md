@@ -27,3 +27,4 @@ yarn dev
 2. I think I could've used more structured names for my CSS classes. TBH I didn't thought about it much because I've tried to fit in the proposed time limits
 3. Instead of relying on the `loggedInUser` state in App.tsx I could have implemented a proper routing and made sure that `LoggedInToast` route is inaccesible to the unathenticated users. Again, decided not to got this route because of the time constraints
 4. I'm not a fan of hardcoded `px` values in the styles. Some of the components had weird paddings (like `50px` on the left and `51px` on the right), Not sure whether this was intentional, so decided to stick with hardcoded `px` values in styles.
+5. Jest configuration in Vite - I'm going to be honest, I've had to do some shinenigans to make Jest work in Vite. Found a couple of articles and followed their instructions, that's why you can see some somments in the config files. Pretty sure I've done it not in the cleaniest way
