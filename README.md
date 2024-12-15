@@ -22,6 +22,16 @@ yarn
 yarn dev
 ```
 
+## How to run tests
+
+Clone the repo
+
+Run
+
+```
+yarn test
+```
+
 ## What I think could be improved
 
 1. I would prefer to extract colors to CSS variables, but decided to stick with the current approach to fit within the proposed in the task time limits
