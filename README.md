@@ -2,12 +2,12 @@
 
 ## What I've used
 
-Vite - as far as I've understood from the call, the company uses it ATM, so I've decided to stick with it
-React
-Typescript - if there's an option to use Typescript, I alwasy prefer to use Typescript
-CSS - I didn't saw a need to use any preprocessor or CSS library here, the styles are quite basic and there's no need in them IMO
-Classnames - just a convenient tool for dynamic CSS classes I'm used to, used it for Input validation styling mostly
-MSW - to mock API calls
+- Vite - as far as I've understood from the call, the company uses it ATM, so I've decided to stick with it
+- React
+- Typescript - if there's an option to use Typescript, I alwasy prefer to use Typescript
+- CSS - I didn't saw a need to use any preprocessor or CSS library here, the styles are quite basic and there's no need in them IMO
+- Classnames - just a convenient tool for dynamic CSS classes I'm used to, used it for Input validation styling mostly
+- MSW - to mock API calls
 
 ## How to run
 
