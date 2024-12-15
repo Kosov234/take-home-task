@@ -1,0 +1,39 @@
+.SignInToast-CheckboxWrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.SignInToast-CheckboxWrapper label {
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(240, 237, 255, 1);
+  border-radius: 2px;
+  position: relative;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #7C3AED;
+  border-color: #7C3AED;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0px 2px 2px 0px;
+  border-radius: 2px;
+  transform: rotate(45deg);
+}

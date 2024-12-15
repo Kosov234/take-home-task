@@ -1,0 +1,26 @@
+.StylizedInput-Wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.StylizedInput {
+  padding: 17px 18px;
+  border-radius: 16px;
+  background-color: rgba(240, 237, 255, 0.8);
+  color: #374151;
+  border: none;
+}
+
+.StylizedInput:focus {
+  outline-color: rgba(145, 129, 244, 1);
+}
+
+.StylizedInput.has-error:focus {
+  outline-color: red;
+}
+
+.StylizedInput-Error {
+  padding: 4px 10px;
+  font-size: 7px;
+  color: red;
+}

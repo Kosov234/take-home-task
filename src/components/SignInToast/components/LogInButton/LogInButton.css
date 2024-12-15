@@ -1,0 +1,31 @@
+.LogInButton-Wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.LogInButton-Wrapper button {
+  padding: 17px 30px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(to bottom right, rgba(145, 129, 244, 1), rgba(80, 56, 237, 1));
+  color: white;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  box-shadow: 0 8px 21px rgba(0, 0, 0, 0.16);
+}
+
+.LogInButton-Wrapper button:hover {
+  opacity: 0.9;
+}
+
+.LogInButton-Wrapper button:active {
+  transform: translateY(1px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.16);
+}
+
+.LogInButton-Wrapper button:disabled {
+  background: rgba(145, 129, 244, 0.5);
+  cursor: not-allowed;
+}

@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+}
+
+#root {
+  background: linear-gradient(to left bottom , rgba(145, 129, 244, 1) , rgba(80, 56, 237, 1) );
+  font-family: "Poppins", serif;
+}
+
+input::-webkit-input-placeholder {
+  font-family: 'Poppins', sans-serif;
+}
+
+input:-ms-input-placeholder {
+  font-family: 'Poppins', sans-serif;
+}
+
+input:-moz-placeholder {
+  font-family: 'Poppins', sans-serif;
+}
+
+input::-moz-placeholder {
+  font-family: 'Poppins', sans-serif;
+}
